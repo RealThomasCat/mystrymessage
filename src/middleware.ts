@@ -18,6 +18,11 @@ export async function middleware(request: NextRequest) {
     ) {
         return NextResponse.redirect(new URL("/dashboard", request.url));
     }
+
+    // If user is not authenticated and is trying to access dashboard, redirect to sign-in
+    if (!token && url.pathname.startsWith("/dashboard")) {
+        return NextResponse.redirect(new URL("/sign-in", request.url));
+    }
 }
 
 // This defines the paths where the middleware will be applied
