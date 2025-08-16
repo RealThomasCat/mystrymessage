@@ -15,10 +15,11 @@ export async function GET(request: Request) {
     try {
         // Request url example: localhost:3000/api/check-username-unique?username=yashveer...etc...
 
-        // Get search parameters from the request URL
+        // Destructuring searchParams from the request URL object
         const { searchParams } = new URL(request.url);
 
-        // Get query parameters from the searchParams
+        // Extract query parameters from the searchParams
+        // queryParam will be an object with the username inside it: { username: 'yashveer' }
         const queryParam = {
             username: searchParams.get("username"),
         };
@@ -47,7 +48,9 @@ export async function GET(request: Request) {
         }
 
         // If validation is successful, we have to check if the username exists in the database
-        // First extract username from the validated result
+
+        // First extract username from the validated result.
+        // Best practice: always use result.data so you benefit from validation and transformations.
         const { username } = result.data;
 
         // Check if a verified user exists with the given username
