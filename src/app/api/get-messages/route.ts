@@ -70,5 +70,15 @@ export async function GET(request: Request) {
             },
             { status: 200 }
         );
-    } catch (error) {}
+    } catch (error) {
+        console.log("An unexpected error occurred:", error);
+
+        return Response.json(
+            {
+                success: false,
+                message: "Internal server error",
+            },
+            { status: 500 }
+        );
+    }
 }
