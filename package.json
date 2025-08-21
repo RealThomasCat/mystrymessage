@@ -10,9 +10,13 @@
   },
   "dependencies": {
     "@ai-sdk/google": "^2.0.7",
+    "@hookform/resolvers": "^5.2.1",
+    "@radix-ui/react-label": "^2.1.7",
+    "@radix-ui/react-slot": "^1.2.3",
     "@react-email/components": "^0.5.0",
     "@react-email/render": "^1.2.0",
     "ai": "^5.0.19",
+    "axios": "^1.11.0",
     "bcryptjs": "^3.0.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -21,10 +25,14 @@
     "mongoose": "^8.17.1",
     "next": "15.4.6",
     "next-auth": "^4.24.11",
+    "next-themes": "^0.4.6",
     "react": "19.1.0",
     "react-dom": "19.1.0",
+    "react-hook-form": "^7.62.0",
     "resend": "^6.0.1",
+    "sonner": "^2.0.7",
     "tailwind-merge": "^3.3.1",
+    "usehooks-ts": "^3.1.1",
     "zod": "^4.0.17"
   },
   "devDependencies": {
