@@ -14,7 +14,6 @@ import { toast } from "sonner";
 import {
     Form,
     FormControl,
-    FormDescription,
     FormField,
     FormItem,
     FormLabel,
@@ -100,9 +99,7 @@ const page = () => {
             );
 
             // Show success toast
-            toast("Success", {
-                description: response.data.message,
-            });
+            toast.success("Success", { description: response.data.message });
 
             // Redirect to verify page with username
             router.replace(`/verify/${username}`);
