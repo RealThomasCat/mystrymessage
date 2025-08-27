@@ -4,6 +4,6 @@ import { Message } from "@/models/User";
 export interface ApiResponse {
     success: boolean;
     message: string;
-    isAcceptingMessages?: boolean; // Optional field
+    isAcceptingMessage?: boolean; // Optional field
     messages?: Array<Message>; // Optional field
 }
