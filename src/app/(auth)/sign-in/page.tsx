@@ -90,7 +90,7 @@ const page = () => {
                                     <FormLabel>Email or Password</FormLabel>
                                     <FormControl>
                                         <Input
-                                            placeholder="Email or Password"
+                                            placeholder="Email or Username"
                                             {...field}
                                         />
                                     </FormControl>
@@ -123,7 +123,7 @@ const page = () => {
                                     Please wait
                                 </>
                             ) : (
-                                "Sign Up"
+                                "Sign In"
                             )}
                         </Button>
                     </form>
